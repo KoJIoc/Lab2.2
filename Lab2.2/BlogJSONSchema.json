@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "blog",
+  "type": "object",
+  "properties": {
+    "Articles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string"
+          },
+          "Comments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "TextOfComment": {
+                  "type": "string"
+                },
+                "AnswerComments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "TextOfComment": {
+                        "type": "string"
+                      },
+                      "AnswerCommentator": {
+                        "type": "object",
+                        "properties": {
+                          "Firstname": {
+                            "type": "string"
+                          },
+                          "Lastname": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "Firstname",
+                          "Lastname",
+                          "Id"
+                        ]
+                      },
+                      "Id": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "TextOfComment",
+                      "AnswerCommentator",
+                      "Id"
+                    ]
+                  }
+                },
+                "Commentator": {
+                  "type": "object",
+                  "properties": {
+                    "Firstname": {
+                      "type": "string"
+                    },
+                    "Lastname": {
+                      "type": "string"
+                    },
+                    "Id": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "Firstname",
+                    "Lastname",
+                    "Id"
+                  ]
+                },
+                "Id": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "TextOfComment",
+                "AnswerComments",
+                "Commentator",
+                "Id"
+              ]
+            }
+          },
+          "Tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Title": {
+                  "type": "string"
+                },
+                "Description": {
+                  "type": "string"
+                },
+                "Id": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "Title",
+                "Description",
+                "Id"
+              ]
+            }
+          },
+          "DateOfCreation": {
+            "type": "string"
+          },
+          "Id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "Description",
+          "Comments",
+          "Tags",
+          "DateOfCreation",
+          "Id"
+        ]
+      }
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "object",
+      "properties": {
+        "Firstname": {
+          "type": "string"
+        },
+        "Lastname": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "Firstname",
+        "Lastname",
+        "Id"
+      ]
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Id": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "Articles",
+    "Title",
+    "Owner",
+    "Description",
+    "Id"
+  ]
+}

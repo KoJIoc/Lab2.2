@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Lab2._2</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
+  <ItemGroup>
+    <Compile Remove="Blog\**" />
+    <Compile Remove="User\**" />
+    <EmbeddedResource Remove="Blog\**" />
+    <EmbeddedResource Remove="User\**" />
+    <None Remove="Blog\**" />
+    <None Remove="User\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AnswerComment.cs" />
+    <Compile Remove="Article.cs" />
+    <Compile Remove="Blog.cs" />
+    <Compile Remove="Comment.cs" />
+    <Compile Remove="Role.cs" />
+    <Compile Remove="Tag.cs" />
+    <Compile Remove="UserAuthorization.cs" />
+    <Compile Remove="UserException.cs" />
+    <Compile Remove="UserInfo.cs" />
+    <Compile Remove="UserPatterns.cs" />
+    <Compile Remove="UserRegistration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BlogClass">
+      <HintPath>..\..\BlogClass\BlogClass\bin\Debug\net6.0\BlogClass.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

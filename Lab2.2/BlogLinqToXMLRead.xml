@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<blog id="1">
+  <articles>
+    <article id="1">
+      <descriptionOfArticle>DescriptionOfArticle</descriptionOfArticle>
+      <dateOfCreation>17-05-2023</dateOfCreation>
+      <comments>
+        <comment id="1">
+          <textOfComment>TextOfComment</textOfComment>
+          <answerComments>
+            <answerComment id="1">
+              <textOfAnswerComment>TextOfAnswerComment</textOfAnswerComment>
+              <answerCommentator id="1">
+                <firstnameOfAnswerCommentator>Firstname</firstnameOfAnswerCommentator>
+                <lastnameOfAnswerCommentator>Lastname</lastnameOfAnswerCommentator>
+              </answerCommentator>
+            </answerComment>
+          </answerComments>
+          <commentator id="1">
+            <firstnameOfCommentator>Firstname</firstnameOfCommentator>
+            <lastnameOfCommentator>Lastname</lastnameOfCommentator>
+          </commentator>
+        </comment>
+      </comments>
+      <tags>
+        <tag id="1">
+          <titleOfTag>TitleOfTag</titleOfTag>
+          <descriptionOfTag>DescriptionOfTag</descriptionOfTag>
+        </tag>
+      </tags>
+    </article>
+  </articles>
+  <titleOfBlog>TitleOfBlog</titleOfBlog>
+  <descriptionOfBlog>DescriptionOfBlog</descriptionOfBlog>
+  <owner id="1">
+    <firstnameOfOwner>Firstname</firstnameOfOwner>
+    <lastnameOfOwner>Lastname</lastnameOfOwner>
+  </owner>
+</blog>

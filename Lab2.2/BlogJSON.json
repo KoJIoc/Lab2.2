@@ -1,0 +1,46 @@
+{
+  "Articles": [
+    {
+      "Description": "DescriptionOfArticle",
+      "Comments": [
+        {
+          "TextOfComment": "TextOfComment",
+          "AnswerComments": [
+            {
+              "TextOfComment": "TextOfAnswerComment",
+              "AnswerCommentator": {
+                "Firstname": "Firstname",
+                "Lastname": "Lastname",
+                "Id": 1
+              },
+              "Id": 1
+            }
+          ],
+          "Commentator": {
+            "Firstname": "Firstname",
+            "Lastname": "Lastname",
+            "Id": 1
+          },
+          "Id": 1
+        }
+      ],
+      "Tags": [
+        {
+          "Title": "TitleOfTag",
+          "Description": "DescriptionOfTag",
+          "Id": 1
+        }
+      ],
+      "DateOfCreation": "2023-05-17T00:00:00",
+      "Id": 1
+    }
+  ],
+  "Description": "DescriptionOfBlog",
+  "Id": 1,
+  "Owner": {
+    "Firstname": "Firstname",
+    "Lastname": "Lastname",
+    "Id": 1
+  },
+  "Title": "TitleOfBlog"
+}

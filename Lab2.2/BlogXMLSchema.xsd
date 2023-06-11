@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="blog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="articles">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="article">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="descriptionOfArticle"/>
+										<xs:element type="xs:string" name="dateOfCreation"/>
+										<xs:element name="comments">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="comment">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element type="xs:string" name="textOfComment"/>
+																<xs:element name="answerComments">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="answerComment">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element type="xs:string" name="textOfAnswerComment"/>
+																						<xs:element name="answerCommentator">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element type="xs:string" name="firstnameOfAnswerCommentator"/>
+																									<xs:element type="xs:string" name="lastnameOfAnswerCommentator"/>
+																								</xs:sequence>
+																								<xs:attribute name="id" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																					<xs:attribute name="id" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="commentator">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element type="xs:string" name="firstnameOfCommentator"/>
+																			<xs:element type="xs:string" name="lastnameOfCommentator"/>
+																		</xs:sequence>
+																		<xs:attribute name="id" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="id" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="tags">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="tag">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element type="xs:string" name="titleOfTag"/>
+																<xs:element type="xs:string" name="descriptionOfTag"/>
+															</xs:sequence>
+															<xs:attribute name="id" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="id" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element type="xs:string" name="titleOfBlog"/>
+				<xs:element type="xs:string" name="descriptionOfBlog"/>
+				<xs:element name="owner">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="firstnameOfOwner"/>
+							<xs:element type="xs:string" name="lastnameOfOwner"/>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
